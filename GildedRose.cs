@@ -13,10 +13,8 @@ namespace csharpcore
 
         public void UpdateQuality()
         {
-            for (var i = 0; i < Items.Count; i++)
+            foreach (var item in Items)
             {
-                var item = Items[i];
-
                 if (item.Name != "Sulfuras, Hand of Ragnaros")
                 {
                     item.Quality = Math.Clamp(item.Quality, 0, 50);
@@ -35,7 +33,7 @@ namespace csharpcore
                         {
                             item.Quality++;
                             if (item.SellIn < 11) item.Quality++;
-                            if (Items[i].SellIn < 6) item.Quality++;
+                            if (item.SellIn < 6) item.Quality++;
                         }
                         break;
                     case "Sulfuras, Hand of Ragnaros":
