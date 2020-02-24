@@ -72,7 +72,7 @@ namespace csharpcore
                         }
                         else
                         {
-                            Items[i].Quality = Items[i].Quality - Items[i].Quality;
+                            Items[i].Quality = 0;
                         }
                     }
                     else
