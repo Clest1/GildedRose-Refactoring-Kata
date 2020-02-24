@@ -48,13 +48,13 @@ namespace csharpcore
         public void updateItemSulfuras()
         {
             // Arrange
-            IList<Item> Items = new List<Item> { new Item { Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = 25 } };
+            IList<Item> Items = new List<Item> { new Item { Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = 80 } };
             GildedRose app = new GildedRose(Items);
             // Act
             app.UpdateQuality();
 
             // Assert
-            Assert.Equal(25, Items[0].Quality);
+            Assert.Equal(80, Items[0].Quality);
         }
         [Fact]
         public void updateItemAgedBrie()
@@ -84,13 +84,13 @@ namespace csharpcore
         public void updateItemAgedPerrime()
         {
             // Arrange
-            IList<Item> Items = new List<Item> { new Item { Name = "Aged Brie", SellIn = 0, Quality = 49 } };
+            IList<Item> Items = new List<Item> { new Item { Name = "Aged Brie", SellIn = 0, Quality = 47 } };
             GildedRose app = new GildedRose(Items);
             // Act
             app.UpdateQuality();
 
             // Assert
-            Assert.Equal(50, Items[0].Quality);
+            Assert.Equal(49, Items[0].Quality);
         }
         [Fact]
         public void updateItemBackstage()
@@ -193,7 +193,7 @@ namespace csharpcore
         public void updateItemConjuredPerrime()
         {
             // Arrange
-            IList<Item> Items = new List<Item> { new Item { Name = "std item", SellIn = -1, Quality = 3 } };
+            IList<Item> Items = new List<Item> { new Item { Name = "Conjured std item", SellIn = -1, Quality = 5 } };
             GildedRose app = new GildedRose(Items);
             // Act
             app.UpdateQuality();
@@ -206,7 +206,7 @@ namespace csharpcore
         public void updateItemConjuredPerrimePourris()
         {
             // Arrange
-            IList<Item> Items = new List<Item> { new Item { Name = "std item", SellIn = -1, Quality = 0 } };
+            IList<Item> Items = new List<Item> { new Item { Name = "Conjured std item", SellIn = -1, Quality = 1 } };
             GildedRose app = new GildedRose(Items);
             // Act
             app.UpdateQuality();
