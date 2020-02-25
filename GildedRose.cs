@@ -5,15 +5,15 @@ namespace csharpcore
 {
     public class GildedRose
     {
-        IList<Item> Items;
-        public GildedRose(IList<Item> Items)
+        IList<Item> _items;
+        public GildedRose(IList<Item> items)
         {
-            this.Items = Items;
+            this._items = items;
         }
 
         public void UpdateQuality()
         {
-            foreach (var item in Items)
+            foreach (var item in _items)
             {
                 if (item.Name != "Sulfuras, Hand of Ragnaros")
                 {
